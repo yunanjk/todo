@@ -4,6 +4,10 @@ export default createStore({
     state() {
         return {
             // data 
+            todos: [
+                { id: 1, text: "buy a car", checked: true },
+                { id: 2, text: "play game", checked: false }
+            ]
         }
     },
     mutations: {
