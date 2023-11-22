@@ -71,6 +71,8 @@ export default createStore({
         }
     },
     getters: { // computed(계산)
-        
+        numberOfCompletedTodo: (state) => {
+            return state.todos.filter(todo => todo.checked).length;
+        }
     }
 });
