@@ -28,7 +28,14 @@ export default {
             //     checked: e.target.checked
             // });
 
-            this.$store.commit("TOGGLE_TODO", {
+            // mutations 사용법
+            // this.$store.commit("TOGGLE_TODO", {
+            //     id: this.todo.id,
+            //     checked: e.target.checked
+            // });
+
+            // actions 사용법
+            this.$store.dispatch("toggleTodo", {
                 id: this.todo.id,
                 checked: e.target.checked
             });
@@ -36,7 +43,11 @@ export default {
         clickdelete() {
             // this.$emit("click-delete", this.todo.id);
 
-            this.$store.commit("DELETE_TODO", this.todo.id);
+            // mutations 사용법
+            // this.$store.commit("DELETE_TODO", this.todo.id);
+
+            // actions 사용법
+            this.$store.dispatch("deleteTodo", this.todo.id);
         }
     }
 }
