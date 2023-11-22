@@ -11,7 +11,13 @@ export default {
     },
     methods: {
         addTodo(e) {
-            this.$emit("add-todo", e.target.value);
+            // console.log(e.targe.value);
+            // this.$emit("add-todo", e.target.value);
+
+            // mutations 안에 있는 함수 사용법
+            // 1번째인자: 사용할 함수명, 2번째인자: value값
+            this.$store.commit("ADD_TODO", e.target.value);
+            this.todoText = "";
         }
     }
 }
